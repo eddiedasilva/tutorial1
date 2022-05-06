@@ -1,9 +1,9 @@
 pipeline {
-    agent { docker { run 'zen_kalam' } }
+    agent { docker { image 'nginx:fromDockerfile' } }
     stages {
         stage('build') {
             steps {
-                docker 'start zen_kalam'
+                docker 'start fromDockerfile'
             }
         }
     }
