@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'FoodTrucks/setup-docker.sh'
+                sh 'FoodTrucks/./setup-docker.sh'
             }
         }
     }
