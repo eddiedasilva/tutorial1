@@ -1,9 +1,9 @@
 pipeline {
-    agent { docker { image 'nginx' } }
+    agent { docker { run 'zen_kalam' } }
     stages {
         stage('build') {
             steps {
-                docker 'run --network host -d eddiedasilva/tutoria1'
+                docker 'start zen_kalam'
             }
         }
     }
