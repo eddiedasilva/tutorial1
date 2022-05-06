@@ -5,9 +5,9 @@ pipeline {
           steps {
                 sh 'export PATH = $PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
             }
-          steps {
-                sh 'bash ./FoodTrucks/setup-docker.sh'
-            }
+          #steps {
+          #      sh 'bash ./FoodTrucks/setup-docker.sh'
+          #  }
         }
       }
 }
