@@ -6,7 +6,7 @@ pipeline {
             env.PATH = "$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
                 }
         stage('build') {
-            steps {
+          steps {
                 sh 'bash ./FoodTrucks/setup-docker.sh'
             }
         }
