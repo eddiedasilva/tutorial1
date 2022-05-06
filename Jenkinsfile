@@ -10,5 +10,6 @@ pipeline {
                 sh 'bash ./FoodTrucks/setup-docker.sh'
             }
         }
+      }
     }
 }
