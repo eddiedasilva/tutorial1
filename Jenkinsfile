@@ -1,9 +1,9 @@
 pipeline {
-    agent { docker { image 'nginx:fromDockerfile' } }
+    agent { docker { image 'foodtrucks-web' } }
     stages {
         stage('build') {
             steps {
-                docker 'start fromDockerfile'
+                sh 'setup-docker.sh'
             }
         }
     }
