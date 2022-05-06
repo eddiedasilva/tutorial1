@@ -1,9 +1,9 @@
 pipeline {
-    agent { docker { image 'python:3.10.1-alpine' } }
+    agent { docker { image 'nginx' } }
     stages {
         stage('build') {
             steps {
-                sh 'python3 --version'
+                docker 'run --network host -d eddiedasilva/tutoria1'
             }
         }
     }
