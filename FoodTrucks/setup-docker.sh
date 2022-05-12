@@ -5,11 +5,14 @@
 docker build -t foodtrucks-web .
 
 # create the network
-docker network create foodtrucks-net
+#docker network create foodtrucks-net
+/usr/bin/docker network create foodtrucks-net
 
 # start the ES container
-docker run -d --name es --net foodtrucks-net -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:6.3.2
+#docker run -d --name es --net foodtrucks-net -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:6.3.2
+/usr/bin/docker run -d --name es --net foodtrucks-net -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:6.3.2
 
 # start the flask app container
 #docker run -d --net foodtrucks-net -p 5000:5000 --name foodtrucks-web prakhar1989/foodtrucks-web
-docker run -d --net foodtrucks-net -p 5000:5000 --name foodtrucks-webJenkins foodtrucks-web
+#docker run -d --net foodtrucks-net -p 5000:5000 --name foodtrucks-webJenkins foodtrucks-web
+/usr/bin/docker run -d --net foodtrucks-net -p 5000:5000 --name foodtrucks-webJenkins foodtrucks-web
