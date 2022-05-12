@@ -2,7 +2,7 @@
 
 # build the flask container
 #docker build -t prakhar1989/foodtrucks-web .
-docker build -t foodtrucks-web .
+/usr/bin/docker build -t foodtrucks-web .
 
 # create the network
 #docker network create foodtrucks-net
